@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --primary-orange: hsl(31, 77%, 52%);
+    --primary-cyan: hsl(184, 100%, 22%);
+    --primary-darkcyan: hsl(179, 100%, 13%);
+    --neutral-white:hsla(0, 0%, 100%, 0.75);
+    --neutral-gray:hsl(0, 0%, 95%);
+}
+
+*, 
+::after, 
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--neutral-gray);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin: 8rem auto;
+}
+.attribution {
+    margin:  0 auto 2em 0 ;
+    text-align: center;
+}
+.attribution a {
+    text-decoration: none;
+    color: var(--primary-orange);
+}
+.card:nth-child(1) {
+    background-color: var(--primary-orange);
+    border-radius: 10px 0 0 10px;
+}
+.card:nth-child(1) > .read-more {
+    color: var(--primary-orange);
+}
+.card:nth-child(2) {
+    background-color: var(--primary-cyan);
+}
+.card:nth-child(2) > .read-more {
+    color: var(--primary-cyan);
+}
+.card:nth-child(3) {
+    background-color: var(--primary-darkcyan);
+    border-radius: 0 10px 10px 0;
+}
+.card:nth-child(3) > .read-more {
+    color: var(--primary-darkcyan);
+}
+
+.card {
+    width: 300px;
+    color: var(--neutral-white);
+    padding: 4em;
+}
+
+img {
+    margin-bottom: 2em;
+}
+
+.card-title {
+    font-family: 'Big Shoulders Display';
+    color: var(--neutral-gray);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.card-text {
+    font-family: 'Lexend Deca';
+    font-size: 15px;
+    line-height: 1.5rem;
+}
+
+.read-more {
+    font-size: 15px;
+    margin-top: 2em;
+    padding: 0.6em 1.2em;
+    border-radius: 20px;
+    box-shadow: none;
+    border: none;
+    background-color: var(--neutral-gray);
+    border: 2px solid var(--neutral-gray);
+}
+
+.card > .read-more:hover{
+    background-color: transparent;
+    color: var(--neutral-gray);
+    cursor: pointer;
+}
+
+
+@media (max-width:599px) {
+    .card {
+        padding: 3em;
+        /* margin: 0 2em; */
+    }
+    .card:nth-child(1) {
+        border-radius: 10px 10px 0 0;
+    }
+    .card:nth-child(3) {
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+@media (max-width:899px) {
+    .card:nth-child(2) {
+        border-radius: 0 10px 10px 0;
+    }
+    .card:nth-child(3) {
+        border-radius: 0 0 10px 10px;
+    }
+}
