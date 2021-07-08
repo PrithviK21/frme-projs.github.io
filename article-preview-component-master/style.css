@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root {
+    --color-vdgblue: hsl(217, 19%, 35%);
+    --color-dedblue: hsl(214, 17%, 51%);
+    --color-gblue: hsl(212, 23%, 69%);
+    --color-lgblue: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-lgblue);
+    font-family: 'Manrope', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 80%;
+    margin: 5em auto;
+    border-radius: 20px;
+}
+
+.img-container {
+    margin-bottom: -3em;
+    border-radius: 20px;
+}
+
+.img-container > img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.text-container {
+    padding: 0 2em;
+    line-height: 1.5em;
+}
+
+.text-container > h3 {
+    color: var(--color-vdgblue);
+}
+.text-container > p {
+    padding: 2em 0;
+    color: var(--color-dedblue);
+}
+
+.author-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em 1em 2em;
+}
+.date {
+    display: block;
+    color: var(--color-gblue);
+}
+.share-btn {
+    
+    background-color: var(--color-lgblue);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.abs {
+    position: absolute;
+    right: 15%;
+}
+
+.share-btn:hover{
+    transition: 0.25s ease;
+    filter: invert(20%);
+    cursor: pointer;
+}
+
+.author-pic {
+    border-radius: 50%;
+    width: 50px;
+}
+
+.hide {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+}
+
+.share-items {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: var(--color-vdgblue);
+    color: var(--color-dedblue);
+    letter-spacing: 0.5em;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 2em 0 2em;
+    border-radius: 0 0 20px 20px;
+}
+
+.share-items>img {
+    padding-left: 1em;
+}

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --clrRed: hsl(0, 100%, 74%) ;
+    --clrGreen: hsl(154, 59%, 51%);
+    --clrBlue: hsl(248, 32%, 49%);
+    --clrDarkBlue: hsl(249, 10%, 26%) ;
+    --clrGrayishBlue: hsl(246, 25%, 77%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    background-image: url('images/bg-intro-mobile.png');
+    background-color: var(--clrRed);
+}
+
+.bold {
+    font-weight: 600;
+}
+.orange {
+    color: var(--clrRed);
+    font-weight: 600;
+}
+.text-container {
+    color: white;
+    text-align: center;
+    padding: 3em 1em;
+}
+
+.text-container h2 {
+    padding: 1em 2.5em;
+}
+
+.text-container p {
+    line-height: 1.75em;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-text {
+    background-color: var(--clrBlue);
+    color: white;
+    text-align: center;
+    padding: 1.5em 3.5em;
+    margin: 2em;
+    border-radius: 10px;
+    box-shadow: 0 8px 0px 0px rgba(0,0,0,0.2);
+}
+
+form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2em;
+    padding: 1em 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 0px 0px rgba(0,0,0,0.2);
+}
+
+input {
+    padding: 1em;
+    margin: 0.7em;
+    border-radius: 5px;
+    font-weight: 700;
+    color: var(--clrDarkBlue);
+    border: 1px solid var(--clrGrayishBlue);
+    
+    width: 80%;
+}
+
+input[type='submit'] {
+    background-color: var(--clrGreen);
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+input[type='submit']:hover {
+    cursor: pointer;
+    transition: 0.1s ease;
+    filter:saturate(0.7) brightness(1.2);
+}
+
+.tnc {
+    font-size: 0.7em;
+    color: var(--clrGrayishBlue);
+    padding: 1em 4em;
+    text-align: center;
+}
+
+.attribution {
+    text-align: center;
+    font-size: 0.8em;
+    padding: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clrBlue);
+}
+
+@media (min-width:768px) {
+
+    body {
+        background-image: url('images/bg-intro-desktop.png');
+        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center ;
+        align-items: center;
+    }
+    .text-container {
+        padding: 5em 0 0 9em;
+        text-align: left;
+    }
+    .text-container h2 {
+        padding: 0.5em 0;
+        font-size: 3em;
+    }
+}

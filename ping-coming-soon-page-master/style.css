@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+    --Blue: hsl(223, 87%, 63%);
+    --PaleBlue: hsl(223, 100%, 88%);
+    --LightRed: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --VeryDarkBlue: hsl(209, 33%, 12%);
+}
+
+* {
+    font-family: 'Libre Franklin';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: clamp(350px,66%,800px);
+    margin: auto;
+}
+
+.logo {
+    width: 17%;
+    margin: 4em auto;
+}
+
+.text {
+    font-weight: 300;
+    font-size: 1.7em;
+    color: var(--Gray);
+    margin-bottom: 1em;
+}
+
+.text > span {
+    font-weight: 700;
+    color: black;
+}
+
+p {
+    margin-bottom: 2em;
+}
+
+form {
+    width: 80%;
+}
+
+input {
+    padding: 1.3em;
+    border-radius: 50px;
+    border: none;
+    margin: 0.5em;
+    width: 100%;
+}
+
+input[type='email'] {
+    border: 1px solid var(--PaleBlue);
+}
+
+input[type='submit'] {
+    display: block;
+    margin: 1em auto;
+    background-color: var(--Blue);
+    color: white;
+    font-weight: 600;
+}
+
+input[type='submit']:hover{
+    background-color: var(--PaleBlue);
+    box-shadow: 0px 1px 4px black;
+    cursor: pointer;
+}
+
+.main-pic {
+    width: 100%;
+    margin: 5em 3em;
+}
+
+.social-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-bottom: 2em;
+}
+
+.blue {
+    color: var(--Blue);
+}
+
+i {
+    padding: .3em;
+    
+    border-radius: 50%;
+}
+i:hover{
+    background-color: var(--Blue);
+    color: white;
+}
+.copyright {
+    color: var(--Gray);
+    font-size: 0.8em;
+}
+.attribution {
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    .container {
+    }
+    input[type='email'] {
+        flex: 4;
+    }
+    form {
+        display: flex;
+    }
+    input[type='submit'] {
+        flex: 2;
+    }
+    .logo {
+        width: 10%;
+        margin-bottom: 2em;
+    }
+    .text {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+    }
+    .main-pic {
+        width: 80%;
+    }
+}

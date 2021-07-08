@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --colorRed: hsl(0, 78%, 62%);
+    --colorCyan: hsl(180, 62%, 55%);
+    --colorOrange: hsl(34, 97%, 64%);
+    --colorBlue: hsl(212, 86%, 64%);
+    --colorVeryDarkBlue: hsl(234, 12%, 34%);
+    --colorGrayishBlue: hsl(229, 6%, 66%);
+    --colorVeryLightGray: hsl(0, 0%, 98%);
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+a {
+    color: var(--colorRed);
+}
+
+body {
+    background-color: var(--colorVeryLightGray);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container {
+    margin: 4em 2em;
+    text-align: center;
+    color: var(--colorGrayishBlue);
+}
+
+.text-container span {
+    font-size: 1.5em;
+}
+
+.text-container h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--colorVeryDarkBlue);
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    padding: 2em;
+    margin: 1em;
+    box-shadow: 0px 1px 10px 1px var(--colorGrayishBlue);
+}
+
+.card:nth-child(1) {
+    border-top: 5px solid var(--colorCyan);
+}
+.card:nth-child(2) {
+    border-top: 5px solid var(--colorRed);
+}
+.card:nth-child(3) {
+    border-top: 5px solid var(--colorOrange);
+}
+.card:nth-child(4) {
+    border-top: 5px solid var(--colorBlue);
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--colorVeryDarkBlue);
+}
+
+.card-text {
+    font-size: 15px;
+    color: var(--colorGrayishBlue);
+}
+
+.card > img {
+    position: relative;
+    float: right;
+    margin-top: 2em;
+}
+
+.attribution {
+    text-align: center;
+}
+
+@media (min-width:768px) {
+
+    .text-container {
+        width: 33%;
+        margin: 2em auto;
+    }
+    .text-container p {
+        margin-top: 1em;
+    }
+    .text-container h3, .text-container span {
+        font-size: 2em;
+    }
+    .card-container {
+        margin: 0 4em;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "left middletop right" "left middlebottom right";
+        justify-items: center;
+        align-items: center;
+    }
+
+    
+
+    .card:nth-child(1) {
+        grid-area: left;
+    }
+    .card:nth-child(2) {
+        grid-area: middletop;
+    }
+    .card:nth-child(3) {
+        grid-area: middlebottom;
+    }
+    .card:nth-child(4) {
+        grid-area: right;
+    }
+    
+}
