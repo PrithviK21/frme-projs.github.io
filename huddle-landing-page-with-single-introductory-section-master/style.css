@@ -117,11 +117,19 @@ a {
         padding: 0 2em;
     }
     .main-img {
-        width: 50%;
+        width: 40%;
     }
     .text-container {
         width: 50%;
+        text-align: left;
+        padding: 3em;
     }
+    .text-container h2 {
+        margin: 1em 0;
+        font-size: 2em;
+        width: 80%;
+    }
+
     .logo {
         width: 15%;
     }
@@ -129,5 +137,8 @@ a {
         align-self: flex-end;
         position: relative;
         left: 40%;
+    }
+    button {
+        width: 30%;
     }
 }
